@@ -4,7 +4,6 @@
 
 .welcome {
   @extend %__inner;
-  min-height: 100vh;
   padding-block: space("x-large");
   background-color: theme-color("lighter");
 
@@ -17,7 +16,7 @@
   }
 
   &__image {
-    @include col(4, true, "md");
+    @include col(6, true, "md");
     padding-inline: space("x-large");
 
     @media (min-width: breakpoint("md")) {
@@ -30,8 +29,7 @@
   }
 
   &__content {
-    @include col(2, true, "md");
-    padding-inline: space("large");
+    @include col(3, true, "md");
 
     @media (min-width: breakpoint("md")) {
       order: 0;
@@ -39,7 +37,7 @@
   }
 
   &__illust {
-    width: 15rem;
+    width: 12rem;
     margin: space("large") auto;
 
     @media (min-width: breakpoint("md")) {
