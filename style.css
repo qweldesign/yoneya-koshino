@@ -15,18 +15,18 @@
   --color--darker--active: gray;
   --color--dark: #808080;
   --color--dark--active: #b3b3b3;
-  --color--light: #b3b3b3;
-  --color--light--active: gray;
-  --color--lighter: #d9d9d9;
-  --color--lighter--active: #a6a6a6;
+  --color--light: #d9d9d9;
+  --color--light--active: #a6a6a6;
+  --color--lighter: #f3f3f3;
+  --color--lighter--active: silver;
   --color--lightest: #ffffff;
   --color--lightest--active: #cccccc;
-  --color--primary: hsl(203, 71%, 60%);
-  --color--primary--active: hsl(203, 71%, 80%);
-  --color--secondary: hsl(32, 85%, 48%);
-  --color--secondary--active: hsl(32, 85%, 68%);
-  --color--tertiary: hsl(70, 100%, 34%);
-  --color--tertiary--active: hsl(70, 100%, 54%);
+  --color--primary: #8d4550;
+  --color--primary--active: rgb(189.9428571429, 122.0571428571, 132.4285714286);
+  --color--secondary: #449c90;
+  --color--secondary--active: rgb(126.8571428571, 199.1428571429, 189.2857142857);
+  --color--tertiary: #cbe1e3;
+  --color--tertiary--active: rgb(136.7, 186.75, 191.3);
   --container-width--sm: 37.5rem;
   --container-width--md: 56.25rem;
   --container-width--lg: 75rem;
@@ -193,29 +193,20 @@ button, input, select, textarea {
   z-index: 1000;
   width: 100%;
   height: 4.5rem;
-  transition: all 0.35s ease;
+  background-color: var(--color--lighter);
+  font-size: var(--font-size--medium);
+  transition: all 0.35s ease-in-out;
 }
 .header a {
-  color: var(--color--lightest);
+  color: var(--color--darkest);
 }
-@media (max-width: 899.9px) {
-  .header .gNav__siteBrand a {
-    color: var(--color--lightest);
-    text-shadow: 0 0 6px #000;
-  }
-  .header .gNav__siteBrand a:hover {
-    color: var(--color--lightest);
-  }
+.header a:hover {
+  color: var(--color--primary);
 }
 @media (min-width: 900px) {
-  .header:hover, .header:not(.is-active) {
-    background-color: var(--color--lightest);
-  }
-  .header:hover a, .header:hover .gNav__siteBrand a, .header:not(.is-active) a, .header:not(.is-active) .gNav__siteBrand a {
-    color: var(--color--darker);
-  }
-  .header:hover a:hover, .header:hover .gNav__siteBrand a:hover, .header:not(.is-active) a:hover, .header:not(.is-active) .gNav__siteBrand a:hover {
-    color: var(--color--primary);
+  .header:hover, .header.is-active {
+    height: 7.5rem;
+    font-size: var(--font-size--large);
   }
 }
 .header__container {
@@ -236,10 +227,22 @@ button, input, select, textarea {
   height: 100%;
 }
 .gNav__siteBrand {
-  flex: 0 1 9rem;
+  flex: 0 1 13.5rem;
   margin: 0;
-  text-align: center;
-  text-transform: uppercase;
+  font-weight: 400;
+  font-size: var(--font-size--small);
+  line-height: 1.68;
+  text-align: left;
+}
+@media (min-width: 900px) {
+  .gNav__siteBrand {
+    font-size: var(--font-size--normal);
+  }
+}
+.gNav__siteBrand a:hover {
+  color: var(--color--darkest);
+  text-decoration: none;
+  opacity: 0.7;
 }
 .gNav__primaryMenu {
   list-style: none;
@@ -248,18 +251,8 @@ button, input, select, textarea {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  flex: 0 1 36rem;
-  margin: 0;
-  text-transform: capitalize;
-}
-.gNav__socialMenu {
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  flex: 0 1 9rem;
+  flex: 0 1 auto;
+  gap: var(--spacing--large);
   margin: 0;
 }
 .gNav__menuItem {
@@ -267,10 +260,6 @@ button, input, select, textarea {
 }
 .gNav__menuItem.is-current {
   font-weight: 700;
-}
-.gNav__menuItem.is-social {
-  width: 3rem;
-  text-align: center;
 }
 .gNav__menuItem a {
   display: block;
@@ -280,6 +269,9 @@ button, input, select, textarea {
 /**
  * Main
  */
+.main {
+  min-height: 100vh;
+}
 .main__container {
   width: min(100%, var(--container-width--md));
   margin-inline: auto;
@@ -458,11 +450,11 @@ button, input, select, textarea {
 }
 .button.is-tertiary, .button.is-tertiary:active {
   background-color: var(--color--tertiary);
-  color: var(--color--lightest);
+  color: var(--color--darkest);
 }
 .button.is-tertiary:hover, .button.is-tertiary:focus {
   background-color: var(--color--tertiary--active);
-  color: var(--color--darkest);
+  color: var(--color--lightest);
 }
 .button.is-tertiary:hover, .button.is-tertiary:focus {
   box-shadow: 0 0 var(--spacing--small) var(--color--tertiary);
@@ -531,12 +523,12 @@ button, input, select, textarea {
   font-style: normal;
   font-size: 0.875rem;
   color: var(--color--darker);
-  background-color: rgba(226.44, 129.336, 18.36, 0.15);
+  background-color: rgba(68, 156, 144, 0.15);
   padding: 0 0.2em;
   border-radius: 0.2em;
 }
 .breadcrumb__item span {
-  background-color: rgba(80.58, 169.898, 225.42, 0.1);
+  background-color: rgba(141, 69, 80, 0.1);
 }
 
 /**
@@ -1131,42 +1123,114 @@ button, input, select, textarea {
 /**
  * Project - Section
  */
-.section__inner {
+.welcome {
   padding-block: var(--spacing--large);
 }
-:where(.section__inner) {
+:where(.welcome) {
   background-color: var(--color--lightest);
 }
-:where(.section:nth-child(odd) .section__inner) {
+:where(.section:nth-child(odd) .welcome) {
   background-color: var(--color--darker);
   color: var(--color--lightest);
 }
-:where(.section:nth-child(odd) .section__inner) a, :where(.section:nth-child(odd) .section__inner) a:active {
+:where(.section:nth-child(odd) .welcome) a {
   color: var(--color--lightest);
   text-decoration: none;
 }
-:where(.section:nth-child(odd) .section__inner) a:hover, :where(.section:nth-child(odd) .section__inner) a:focus {
+:where(.section:nth-child(odd) .welcome) a:hover, :where(.section:nth-child(odd) .welcome) a:focus {
   color: var(--color--lightest);
   text-decoration: underline;
 }
-.section__heading {
+
+.welcome__heading {
   margin: var(--spacing--medium) 0;
-  text-align: center;
-  text-transform: capitalize;
+  font-weight: 700;
+  font-size: var(--font-size--x-large);
 }
-.section__container {
+
+.welcome__container {
   padding-block-start: calc(var(--spacing--small) + var(--spacing--medium));
   padding-block-end: var(--spacing--large);
 }
-.section__container:not(.section__container.is-md) {
+.welcome__container:not(.section__container.is-md) {
   width: min(100%, var(--container-width--lg));
   margin-inline: auto;
   padding-inline: var(--container-pad--lg);
 }
-.section__container.is-md {
+.is-md.welcome__container {
   width: min(100%, var(--container-width--md));
   margin-inline: auto;
   padding-inline: var(--container-pad--md);
+}
+
+/**
+ * Project - Welcome
+ */
+.welcome {
+  min-height: 100vh;
+  padding-block: var(--spacing--x-large);
+  background-color: var(--color--lighter);
+}
+.welcome__flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .welcome__image {
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 24rem;
+  }
+}
+.welcome__image {
+  width: 100%;
+  padding-inline: var(--container-pad--sm);
+  padding-inline: var(--spacing--x-large);
+}
+@media (min-width: 900px) {
+  .welcome__image {
+    order: 1;
+  }
+}
+.welcome__image img {
+  -webkit-mask: url("./assets/mask.svg") center/contain no-repeat;
+          mask: url("./assets/mask.svg") center/contain no-repeat;
+}
+@media (min-width: 900px) {
+  .welcome__content {
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 12rem;
+  }
+}
+.welcome__content {
+  width: 100%;
+  padding-inline: var(--container-pad--sm);
+  padding-inline: var(--spacing--large);
+}
+@media (min-width: 900px) {
+  .welcome__content {
+    order: 0;
+  }
+}
+.welcome__illust {
+  width: 15rem;
+  margin: var(--spacing--large) auto;
+}
+@media (min-width: 900px) {
+  .welcome__illust {
+    transform: translateX(-1.5rem);
+  }
+}
+@media (min-width: 900px) {
+  .welcome__textWrap {
+    transform: translateX(3rem);
+  }
+}
+.welcome__text {
+  text-align: justify;
 }
 
 /**
@@ -1362,7 +1426,7 @@ button, input, select, textarea {
 .form table input, .form table select, .form table textarea {
   border: none;
   border-radius: var(--spacing--x-small);
-  background-color: rgba(80.58, 169.898, 225.42, 0.05);
+  background-color: rgba(141, 69, 80, 0.05);
 }
 .form [type=submit] {
   display: inline-block;

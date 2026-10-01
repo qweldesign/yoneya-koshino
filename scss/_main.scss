@@ -3,6 +3,8 @@
  */
 
 .main {
+  min-height: 100vh;
+
   &__container {
     @include container("md");
   }

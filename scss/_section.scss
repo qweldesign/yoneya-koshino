@@ -2,36 +2,33 @@
  * Project - Section
  */
 
-.section {
-  &__inner {
-    padding-block: space("large");
+%__inner {
+  padding-block: space("large");
 
-    :where(&) {
-      background-color: $body-bg;
-    }
-
-    // Test Responsive Color
-    :where(.section:nth-child(odd) &) {
-      @include background("darker");
-    }
+  :where(&) {
+    background-color: $body-bg;
   }
 
-  &__heading {
-    margin: space("medium") 0;
-    text-align: center;
-    text-transform: capitalize;
+  :where(.section:nth-child(odd) &) {
+    @include background("darker");
+  }
+}
+
+%__heading {
+  margin: space("medium") 0;
+  font-weight: 700;
+  font-size: font-size("x-large");
+}
+
+%__container {
+  padding-block-start: calc(#{space()} + #{space("medium")});
+  padding-block-end: space("large");
+
+  &:not(.section__container.is-md) {
+    @include container();
   }
 
-  &__container {
-    padding-block-start: calc(#{space()} + #{space("medium")});
-    padding-block-end: space("large");
-
-    &:not(.section__container.is-md) {
-      @include container();
-    }
-
-    &.is-md {
-      @include container("md");
-    }
+  &.is-md {
+    @include container("md");
   }
 }
