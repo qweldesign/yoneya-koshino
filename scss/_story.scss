@@ -1,0 +1,35 @@
+/**
+ * Project - Story
+ */
+
+.story {
+  @extend %__inner;
+  padding-block: space("large");
+
+  &__container {
+    @extend %__container;
+  }
+
+  &__heading {
+    @extend %__heading;
+    margin-block: space("large");
+    text-align: center;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  &__content {
+    @include row(center, center);
+  }
+
+  &__image, &__textWrap {
+    @include col(4, true, "md");
+    padding-inline: space("large");
+  }
+
+  &__text {
+    line-height: 2.24;
+  }
+}

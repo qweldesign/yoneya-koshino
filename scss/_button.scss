@@ -5,7 +5,7 @@
 .button {
   @include make-button();
 
-  @each $key, $color in $colors {
+  @each $key, $color in $theme-colors {
     &.is-#{$key} {
       @include make-button-color($key);
     }

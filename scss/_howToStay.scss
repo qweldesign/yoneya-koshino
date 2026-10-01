@@ -1,0 +1,73 @@
+/**
+ * Project - How to stay
+ */
+
+.how-to-stay {
+  @extend %__inner;
+  padding-block: space("large");
+  background-color: theme-color("lighter");
+
+  &__container {
+    @extend %__container;
+  }
+
+  &__heading {
+    @extend %__heading;
+    margin-block: space("large");
+    text-align: center;
+  }
+
+  &__content {
+    position: relative;
+    @include row(center, center);
+    margin-block: space("x-large");
+    padding-block-end: space("x-large");
+
+    &:nth-of-type(odd) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-of-type(1)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -4.5rem;
+      display: block;
+      width: 12rem;
+      height: 12rem;
+      background: url("./assets/illust_00.png") no-repeat center center / contain;
+    }
+
+    &:nth-of-type(2)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -9rem;
+      display: block;
+      width: 12rem;
+      height: 12rem;
+      background: url("./assets/illust_01.png") no-repeat center center / contain;
+    }
+  }
+
+  &__image, &__textWrap {
+    @include col(4, true, "md");
+  }
+
+  &__illust {
+    width: 12rem;
+    margin-inline: auto;
+  }
+
+  &__textWrap {
+    padding-inline: space("large");
+  }
+
+  &__subHeading {
+    @extend %__subHeading;
+  }
+
+  &__text {
+    line-height: 2.24;
+  }
+}

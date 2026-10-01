@@ -17,7 +17,10 @@
 
   &__image {
     @include col(6, true, "md");
-    padding-inline: space("x-large");
+
+    @media (min-width: breakpoint("sm")) {
+      padding-inline: space("x-large");
+    }
 
     @media (min-width: breakpoint("md")) {
       order: 1;

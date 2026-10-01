@@ -17,7 +17,14 @@
 %__heading {
   margin: space("medium") 0;
   font-weight: 700;
+  font-size: font-size("xx-large");
+}
+
+%__subHeading {
+  margin: space("medium") 0;
+  font-weight: 700;
   font-size: font-size("x-large");
+  line-height: 1.68;
 }
 
 %__container {

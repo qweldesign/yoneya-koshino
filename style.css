@@ -408,7 +408,7 @@ button, input, select, textarea {
  */
 .button, .button:active {
   border: 0;
-  border-radius: var(--spacing--x-small);
+  border-radius: 2.25rem;
   text-align: center;
   text-decoration: none;
   word-break: break-word;
@@ -422,6 +422,72 @@ button, input, select, textarea {
 .button:hover, .button:focus {
   text-decoration: none;
   transform: scale(96%);
+}
+.button.is-darkest, .button.is-darkest:active {
+  background-color: var(--color--darkest);
+  color: var(--color--lightest);
+}
+.button.is-darkest:hover, .button.is-darkest:focus {
+  background-color: var(--color--darkest--active);
+  color: var(--color--darkest);
+}
+.button.is-darkest:hover, .button.is-darkest:focus {
+  box-shadow: 0 0 var(--spacing--small) var(--color--darkest);
+}
+.button.is-darker, .button.is-darker:active {
+  background-color: var(--color--darker);
+  color: var(--color--lightest);
+}
+.button.is-darker:hover, .button.is-darker:focus {
+  background-color: var(--color--darker--active);
+  color: var(--color--darkest);
+}
+.button.is-darker:hover, .button.is-darker:focus {
+  box-shadow: 0 0 var(--spacing--small) var(--color--darker);
+}
+.button.is-dark, .button.is-dark:active {
+  background-color: var(--color--dark);
+  color: var(--color--lightest);
+}
+.button.is-dark:hover, .button.is-dark:focus {
+  background-color: var(--color--dark--active);
+  color: var(--color--darkest);
+}
+.button.is-dark:hover, .button.is-dark:focus {
+  box-shadow: 0 0 var(--spacing--small) var(--color--dark);
+}
+.button.is-light, .button.is-light:active {
+  background-color: var(--color--light);
+  color: var(--color--darkest);
+}
+.button.is-light:hover, .button.is-light:focus {
+  background-color: var(--color--light--active);
+  color: var(--color--lightest);
+}
+.button.is-light:hover, .button.is-light:focus {
+  box-shadow: 0 0 var(--spacing--small) var(--color--light);
+}
+.button.is-lighter, .button.is-lighter:active {
+  background-color: var(--color--lighter);
+  color: var(--color--darkest);
+}
+.button.is-lighter:hover, .button.is-lighter:focus {
+  background-color: var(--color--lighter--active);
+  color: var(--color--lightest);
+}
+.button.is-lighter:hover, .button.is-lighter:focus {
+  box-shadow: 0 0 var(--spacing--small) var(--color--lighter);
+}
+.button.is-lightest, .button.is-lightest:active {
+  background-color: var(--color--lightest);
+  color: var(--color--darkest);
+}
+.button.is-lightest:hover, .button.is-lightest:focus {
+  background-color: var(--color--lightest--active);
+  color: var(--color--lightest);
+}
+.button.is-lightest:hover, .button.is-lightest:focus {
+  box-shadow: 0 0 var(--spacing--small) var(--color--lightest);
 }
 .button.is-primary, .button.is-primary:active {
   background-color: var(--color--primary);
@@ -550,7 +616,7 @@ button, input, select, textarea {
 }
 .pagination__item > a, .pagination__item > a:active {
   border: 0;
-  border-radius: var(--spacing--x-small);
+  border-radius: 2.25rem;
   text-align: center;
   text-decoration: none;
   word-break: break-word;
@@ -582,7 +648,7 @@ button, input, select, textarea {
   height: 3rem;
   line-height: 3rem;
   margin-inline: auto;
-  border-radius: var(--spacing--x-small);
+  border-radius: 2.25rem;
   background-color: var(--color--primary--active);
   color: var(--color--darkest);
   text-align: center;
@@ -1120,41 +1186,48 @@ button, input, select, textarea {
 /**
  * Project - Section
  */
-.welcome {
+.how-to-stay, .story, .welcome {
   padding-block: var(--spacing--large);
 }
-:where(.welcome) {
+:where(.how-to-stay, .story, .welcome) {
   background-color: var(--color--lightest);
 }
-:where(.section:nth-child(odd) .welcome) {
+:where(.section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .welcome) {
   background-color: var(--color--darker);
   color: var(--color--lightest);
 }
-:where(.section:nth-child(odd) .welcome) a {
+:where(.section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .welcome) a {
   color: var(--color--lightest);
   text-decoration: none;
 }
-:where(.section:nth-child(odd) .welcome) a:hover, :where(.section:nth-child(odd) .welcome) a:focus {
+:where(.section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .welcome) a:hover, :where(.section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .welcome) a:focus {
   color: var(--color--lightest);
   text-decoration: underline;
 }
 
-.welcome__heading {
+.how-to-stay__heading, .story__heading, .welcome__heading {
+  margin: var(--spacing--medium) 0;
+  font-weight: 700;
+  font-size: var(--font-size--xx-large);
+}
+
+.how-to-stay__subHeading {
   margin: var(--spacing--medium) 0;
   font-weight: 700;
   font-size: var(--font-size--x-large);
+  line-height: 1.68;
 }
 
-.welcome__container {
+.how-to-stay__container, .story__container, .welcome__container {
   padding-block-start: calc(var(--spacing--small) + var(--spacing--medium));
   padding-block-end: var(--spacing--large);
 }
-.welcome__container:not(.section__container.is-md) {
+.how-to-stay__container:not(.section__container.is-md), .story__container:not(.section__container.is-md), .welcome__container:not(.section__container.is-md) {
   width: min(100%, var(--container-width--lg));
   margin-inline: auto;
   padding-inline: var(--container-pad--lg);
 }
-.is-md.welcome__container {
+.is-md.how-to-stay__container, .is-md.story__container, .is-md.welcome__container {
   width: min(100%, var(--container-width--md));
   margin-inline: auto;
   padding-inline: var(--container-pad--md);
@@ -1183,7 +1256,11 @@ button, input, select, textarea {
 .welcome__image {
   width: 100%;
   padding-inline: var(--container-pad--sm);
-  padding-inline: var(--spacing--x-large);
+}
+@media (min-width: 576px) {
+  .welcome__image {
+    padding-inline: var(--spacing--x-large);
+  }
 }
 @media (min-width: 864px) {
   .welcome__image {
@@ -1226,6 +1303,106 @@ button, input, select, textarea {
 }
 .welcome__text {
   text-align: justify;
+}
+
+/**
+ * Project - Story
+ */
+.story {
+  padding-block: var(--spacing--large);
+}
+.story__heading {
+  margin-block: var(--spacing--large);
+  text-align: center;
+}
+.story__heading span {
+  display: inline-block;
+}
+.story__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 864px) {
+  .story__image, .story__textWrap {
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 20rem;
+  }
+}
+.story__image, .story__textWrap {
+  width: 100%;
+  padding-inline: var(--container-pad--sm);
+  padding-inline: var(--spacing--large);
+}
+.story__text {
+  line-height: 2.24;
+}
+
+/**
+ * Project - How to stay
+ */
+.how-to-stay {
+  padding-block: var(--spacing--large);
+  background-color: var(--color--lighter);
+}
+.how-to-stay__heading {
+  margin-block: var(--spacing--large);
+  text-align: center;
+}
+.how-to-stay__content {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-block: var(--spacing--x-large);
+  padding-block-end: var(--spacing--x-large);
+}
+.how-to-stay__content:nth-of-type(odd) {
+  flex-direction: row-reverse;
+}
+.how-to-stay__content:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -4.5rem;
+  display: block;
+  width: 12rem;
+  height: 12rem;
+  background: url("./assets/illust_00.png") no-repeat center center/contain;
+}
+.how-to-stay__content:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9rem;
+  display: block;
+  width: 12rem;
+  height: 12rem;
+  background: url("./assets/illust_01.png") no-repeat center center/contain;
+}
+@media (min-width: 864px) {
+  .how-to-stay__image, .how-to-stay__textWrap {
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 20rem;
+  }
+}
+.how-to-stay__image, .how-to-stay__textWrap {
+  width: 100%;
+  padding-inline: var(--container-pad--sm);
+}
+.how-to-stay__illust {
+  width: 12rem;
+  margin-inline: auto;
+}
+.how-to-stay__textWrap {
+  padding-inline: var(--spacing--large);
+}
+.how-to-stay__text {
+  line-height: 2.24;
 }
 
 /**
@@ -1432,7 +1609,7 @@ button, input, select, textarea {
 }
 .form [type=submit], .form [type=submit]:active {
   border: 0;
-  border-radius: var(--spacing--x-small);
+  border-radius: 2.25rem;
   text-align: center;
   text-decoration: none;
   word-break: break-word;
