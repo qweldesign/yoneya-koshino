@@ -15,10 +15,10 @@
   --color--darker--active: gray;
   --color--dark: #808080;
   --color--dark--active: #b3b3b3;
-  --color--light: #d9d9d9;
-  --color--light--active: #a6a6a6;
-  --color--lighter: #f3f3f3;
-  --color--lighter--active: silver;
+  --color--light: #dde0d1;
+  --color--light--active: rgb(175.961038961, 182.9350649351, 148.0649350649);
+  --color--lighter: #f4f5f0;
+  --color--lighter--active: rgb(199.12, 204.2, 178.8);
   --color--lightest: #ffffff;
   --color--lightest--active: #cccccc;
   --color--primary: #8d4550;
@@ -307,20 +307,85 @@ button, input, select, textarea {
  * Layout - Footer
  */
 .footer {
-  padding: var(--spacing--x-large);
-  background-color: var(--color--primary);
-  color: var(--color--lightest);
+  background-color: var(--color--lighter);
+  color: var(--color--darkest);
 }
 .footer a, .footer a:active {
-  color: var(--color--lightest);
+  color: var(--color--darkest);
   text-decoration: none;
 }
 .footer a:hover, .footer a:focus {
-  color: var(--color--lightest);
+  color: var(--color--darkest);
   text-decoration: underline;
 }
-.footer {
-  text-align: center;
+.footer__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-block: var(--spacing--x-large) !important;
+}
+@media (min-width: 864px) {
+  .footer__summary, .footer__detail {
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 20rem;
+  }
+}
+.footer__summary, .footer__detail {
+  width: 100%;
+  padding-inline: var(--container-pad--sm);
+}
+.footer__summary {
+  margin-block: var(--spacing--medium);
+}
+.footer__image {
+  width: 18rem;
+}
+.footer__list {
+  list-style: none;
+  padding-inline-start: 0;
+  font-weight: 700;
+}
+.footer__brand {
+  margin-block: var(--spacing--medium);
+  font-size: var(--font-size--xx-large);
+}
+.footer__table {
+  width: 100%;
+}
+@media (max-width: 575.9px) {
+  .footer__table, .footer__table thead, .footer__table tbody, .footer__table tr, .footer__table th, .footer__table td {
+    display: block;
+  }
+}
+.footer__table thead, .footer__table tbody {
+  width: 100%;
+}
+.footer__table thead {
+  border: 0;
+}
+.footer__table tr {
+  border-block-end: 1px solid var(--color--dark);
+}
+.footer__table tr:first-child {
+  border-block-start: 1px solid var(--color--dark);
+}
+.footer__table th, .footer__table td {
+  padding: var(--spacing--small);
+  border: 0;
+}
+.footer__table {
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+  letter-spacing: var(--small-letter-spacing);
+}
+.footer__table th {
+  font-weight: 400;
+}
+.footer__copyright {
+  display: block;
+  margin-block: var(--spacing--medium);
 }
 
 /**
@@ -1218,16 +1283,16 @@ button, input, select, textarea {
   line-height: 1.68;
 }
 
-.how-to-stay__container, .story__container, .welcome__container {
+.how-to-stay__container, .story__container, .welcome__container, .footer__container {
   padding-block-start: calc(var(--spacing--small) + var(--spacing--medium));
   padding-block-end: var(--spacing--large);
 }
-.how-to-stay__container:not(.section__container.is-md), .story__container:not(.section__container.is-md), .welcome__container:not(.section__container.is-md) {
+.how-to-stay__container:not(.section__container.is-md), .story__container:not(.section__container.is-md), .welcome__container:not(.section__container.is-md), .footer__container:not(.section__container.is-md) {
   width: min(100%, var(--container-width--lg));
   margin-inline: auto;
   padding-inline: var(--container-pad--lg);
 }
-.is-md.how-to-stay__container, .is-md.story__container, .is-md.welcome__container {
+.is-md.how-to-stay__container, .is-md.story__container, .is-md.welcome__container, .is-md.footer__container {
   width: min(100%, var(--container-width--md));
   margin-inline: auto;
   padding-inline: var(--container-pad--md);
@@ -1579,10 +1644,10 @@ button, input, select, textarea {
   border: 0;
 }
 .form table tr {
-  border-block-end: 1px solid var(--color--lighter);
+  border-block-end: 1px solid var(--color--dark);
 }
 .form table tr:first-child {
-  border-block-start: 1px solid var(--color--lighter);
+  border-block-start: 1px solid var(--color--dark);
 }
 .form table th, .form table td {
   padding: var(--spacing--small);

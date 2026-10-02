@@ -3,7 +3,47 @@
  */
 
 .footer {
-  padding: space("x-large");
-  @include background($theme-accent);
-  text-align: center;
+  @include background("lighter");
+
+  &__container {
+    @extend %__container;
+    @include row(space-around, flex-end);
+    padding-block: space("x-large") !important;
+  }
+
+  &__summary, &__detail {
+    @include col(4, true, "md");
+  }
+
+  &__summary {
+    margin-block: space("medium");
+  }
+
+  &__image {
+    width: 18rem;
+  }
+
+  &__list {
+    @include list-unstyled();
+    font-weight: 700;
+  }
+
+  &__brand {
+    margin-block: space("medium");
+    font-size: font-size("xx-large");
+  }
+
+  &__table {
+    @include table();
+    @include small-text();
+
+    th {
+      font-weight: 400;
+    }
+  }
+
+  &__copyright {
+    display: block;
+    margin-block: space("medium");
+  }
 }
