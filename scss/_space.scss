@@ -1,0 +1,50 @@
+/**
+ * Project - Space
+ */
+
+.space {
+  @extend %__inner;
+
+  &__container {
+    @extend %__container;
+  }
+
+  &__heading {
+    @extend %__heading;
+    margin-block: space("large");
+    font-family: $font-family-serif;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__content {
+    @include row(center, flex-end);
+    margin-block: space("large");
+
+    &:nth-of-type(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__subContent {
+    @include row(space-around, center);
+  }
+
+  &__image {
+    @include col(5, true, "md");
+  }
+
+  &__textWrap {
+    @include col(4, true, "md");
+    padding: space("large");
+  }
+
+  &__subHeading {
+    @extend %__subHeading;
+  }
+
+  &__text {
+    line-height: 2.24;
+    text-align: justify;
+  }
+}

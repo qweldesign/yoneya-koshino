@@ -45,11 +45,12 @@
 @import "slider";
 
 // Projects
-@import "hero";
 @import "section";
-@import "welcome";
+@import "hero";
 @import "story";
 @import "howToStay";
+@import "plan";
+@import "space";
 @import "postItem";
 @import "postList";
 @import "form";
@@ -58,8 +59,8 @@
 @import "utilities/scroll-offset";
 @import "utilities/scroll-inview";
 @import "utilities/safe-embed";
-//@import "utilities/flex";
-//@import "utilities/flexItem";
+@import "utilities/flex";
+@import "utilities/flexItem";
 @import "utilities/spacing";
 @import "utilities/text";
 @import "utilities/visibility";

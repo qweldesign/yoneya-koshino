@@ -1,0 +1,43 @@
+/**
+ * Project - Plan
+ */
+
+.plan {
+  @extend %__inner;
+  background-color: theme-color("lighter");
+  overflow: hidden;
+
+  &__container {
+    @extend %__container;
+    position: relative;
+  }
+
+  &__content {
+    @media (min-width: breakpoint("md")) {
+      width: 60%;
+      margin-inline-start: 40%;
+    }
+  }
+
+  &__image {
+    width: 16rem;
+    height: 20rem;
+    margin: space("medium") auto;
+    background: url("./assets/space_00.jpg") no-repeat center center / cover scroll;
+
+    @media (min-width: breakpoint("md")) {
+      position: absolute;
+      top: 0;
+      right: 65%;
+      bottom: 0;
+      width: min(45vw, 30rem);
+      height: min(54vw, 36rem);
+      margin: auto;
+    }
+  }
+
+  &__table {
+    @include table();
+    @include small-text();
+  }
+}

@@ -28,8 +28,10 @@ $spacing-props: (
 
   @each $key1, $breakpoint in $breakpoints {
     @each $key2, $val in $spacing-values {
-      .#{$prefix}-#{$key1}-#{$key2} {
-        #{$prop}: $val !important;
+      @media (min-width: breakpoint($key1)) {
+        .#{$prefix}-#{$key1}-#{$key2} {
+          #{$prop}: $val !important;
+        }
       }
     }
   }
