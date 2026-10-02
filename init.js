@@ -23,4 +23,4 @@ class AutoCopyright {
   }
 }
 
-new AutoCopyright(2026, '民宿よねや');
+new AutoCopyright(1880, '民宿よねや');

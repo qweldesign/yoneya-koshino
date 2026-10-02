@@ -8,6 +8,7 @@
   &__container {
     @extend %__container;
     @include row(space-around, flex-end);
+    gap: space("large");
     padding-block: space("x-large") !important;
   }
 
@@ -16,7 +17,20 @@
   }
 
   &__summary {
+    order: 1;
     margin-block: space("medium");
+
+    @media (min-width: breakpoint("md")) {
+      order: 0;
+    }
+  }
+
+  &__detail {
+    order: 0;
+
+    @media (min-width: breakpoint("md")) {
+      order: 1;
+    }
   }
 
   &__image {
@@ -30,6 +44,10 @@
     svg {
       vertical-align: bottom;
     }
+  }
+
+  &__tagline {
+    margin-inline-start: space("medium");
   }
 
   &__brand {
@@ -50,5 +68,6 @@
   &__copyright {
     display: block;
     margin-block: space("medium");
+    margin-inline: space("small");
   }
 }
