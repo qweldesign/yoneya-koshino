@@ -26,9 +26,14 @@
   &__list {
     @include list-unstyled();
     font-weight: 700;
+
+    svg {
+      vertical-align: bottom;
+    }
   }
 
   &__brand {
+    width: 18rem;
     margin-block: space("medium");
     font-size: font-size("xx-large");
   }

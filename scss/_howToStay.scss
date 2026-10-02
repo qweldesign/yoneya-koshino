@@ -13,7 +13,8 @@
 
   &__heading {
     @extend %__heading;
-    margin-block: space("large");
+    width: 21rem;
+    margin: space("large") auto;
     text-align: center;
   }
 
