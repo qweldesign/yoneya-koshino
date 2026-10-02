@@ -31,6 +31,18 @@
     flex: 0 1 auto;
     gap: space("large");
     margin: 0;
+    margin-inline-end: space("large");
+  }
+
+  &__secondaryMenu {
+    @include list-unstyled();
+    position: fixed;
+    top: space("medium");
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: space("medium");
   }
 
   &__menuItem {
@@ -44,6 +56,23 @@
     a {
       display: block;
       line-height: 1;
+      transition: all 0.5s ease;
+    }
+
+    &.is-fixed a {
+      padding: space("large") space("medium");
+      writing-mode: vertical-rl;
+      font-size: font-size("small");
+    }
+
+    &.is-darker a {
+      @include make-button-color("darker");
+      text-decoration: none;
+    }
+
+    &.is-primary a {
+      @include make-button-color("primary");
+      text-decoration: none;
     }
   }
 }

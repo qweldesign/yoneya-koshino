@@ -254,6 +254,18 @@ button, input, select, textarea {
   flex: 0 1 auto;
   gap: var(--spacing--large);
   margin: 0;
+  margin-inline-end: var(--spacing--large);
+}
+.gNav__secondaryMenu {
+  list-style: none;
+  padding-inline-start: 0;
+  position: fixed;
+  top: var(--spacing--medium);
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing--medium);
 }
 .gNav__menuItem {
   margin: 0;
@@ -265,6 +277,40 @@ button, input, select, textarea {
 .gNav__menuItem a {
   display: block;
   line-height: 1;
+  transition: all 0.5s ease;
+}
+.gNav__menuItem.is-fixed a {
+  padding: var(--spacing--large) var(--spacing--medium);
+  writing-mode: vertical-rl;
+  font-size: var(--font-size--small);
+}
+.gNav__menuItem.is-darker a, .gNav__menuItem.is-darker a:active {
+  background-color: var(--color--darker);
+  color: var(--color--lightest);
+}
+.gNav__menuItem.is-darker a:hover, .gNav__menuItem.is-darker a:focus {
+  background-color: var(--color--darker--active);
+  color: var(--color--darkest);
+}
+.gNav__menuItem.is-darker a:hover, .gNav__menuItem.is-darker a:focus {
+  box-shadow: 0 0 var(--spacing--small) var(--color--darker);
+}
+.gNav__menuItem.is-darker a {
+  text-decoration: none;
+}
+.gNav__menuItem.is-primary a, .gNav__menuItem.is-primary a:active {
+  background-color: var(--color--primary);
+  color: var(--color--lightest);
+}
+.gNav__menuItem.is-primary a:hover, .gNav__menuItem.is-primary a:focus {
+  background-color: var(--color--primary--active);
+  color: var(--color--darkest);
+}
+.gNav__menuItem.is-primary a:hover, .gNav__menuItem.is-primary a:focus {
+  box-shadow: 0 0 var(--spacing--small) var(--color--primary);
+}
+.gNav__menuItem.is-primary a {
+  text-decoration: none;
 }
 
 /**
@@ -905,12 +951,6 @@ button, input, select, textarea {
   flex: 1 1 100%;
   padding-inline-start: 0;
 }
-.drawerMenu__socialMenu {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-inline-start: 20%;
-}
 .drawerMenu__item {
   width: 100%;
   margin: 0;
@@ -939,23 +979,6 @@ button, input, select, textarea {
 }
 .drawerMenu__item.is-siteBrand img {
   width: 6rem;
-}
-.drawerMenu__item.is-social {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-block: 1rem;
-}
-.drawerMenu__item.is-social a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  padding: 0;
-}
-.drawerMenu__item.is-social img {
-  width: 100%;
-  height: auto;
 }
 
 .drawerMenuOverlay {
