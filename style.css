@@ -10,23 +10,23 @@
  */
 :root {
   --color--darkest: #262626;
-  --color--darkest--active: #595959;
+  --color--darkest--active: #8c8c8c;
   --color--darker: #4d4d4d;
-  --color--darker--active: gray;
+  --color--darker--active: #b3b3b3;
   --color--dark: #808080;
-  --color--dark--active: #b3b3b3;
+  --color--dark--active: #e6e6e6;
   --color--light: #dde0d1;
-  --color--light--active: rgb(175.961038961, 182.9350649351, 148.0649350649);
+  --color--light--active: rgb(127.8831168831, 136.8051948052, 92.1948051948);
   --color--lighter: #f4f5f0;
-  --color--lighter--active: rgb(199.12, 204.2, 178.8);
+  --color--lighter--active: rgb(154.24, 163.4, 117.6);
   --color--lightest: #ffffff;
-  --color--lightest--active: #cccccc;
+  --color--lightest--active: #999999;
   --color--primary: #8d4550;
-  --color--primary--active: rgb(189.9428571429, 122.0571428571, 132.4285714286);
+  --color--primary--active: rgb(223.4571428571, 190.5428571429, 195.5714285714);
   --color--secondary: #449c90;
-  --color--secondary--active: rgb(126.8571428571, 199.1428571429, 189.2857142857);
+  --color--secondary--active: rgb(197.8928571429, 230.1071428571, 225.7142857143);
   --color--tertiary: #cbe1e3;
-  --color--tertiary--active: rgb(136.7, 186.75, 191.3);
+  --color--tertiary--active: rgb(79.1, 141.25, 146.9);
   --container-width--sm: 31.25rem;
   --container-width--md: 46.875rem;
   --container-width--lg: 62.5rem;
@@ -1310,11 +1310,11 @@ button, input, select, textarea {
   padding-block: var(--spacing--x-large);
   background-color: var(--color--lighter);
 }
-.welcome__flex {
+.welcome__container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 @media (min-width: 864px) {
   .welcome__image {
@@ -1329,7 +1329,7 @@ button, input, select, textarea {
 }
 @media (min-width: 576px) {
   .welcome__image {
-    padding-inline: var(--spacing--x-large);
+    padding-inline: var(--spacing--medium);
   }
 }
 @media (min-width: 864px) {
@@ -1351,6 +1351,8 @@ button, input, select, textarea {
 .welcome__content {
   width: 100%;
   padding-inline: var(--container-pad--sm);
+  width: min(100%, 24rem);
+  margin: 0 auto;
 }
 @media (min-width: 864px) {
   .welcome__content {
@@ -1363,12 +1365,7 @@ button, input, select, textarea {
 }
 @media (min-width: 864px) {
   .welcome__illust {
-    transform: translateX(-1.5rem);
-  }
-}
-@media (min-width: 864px) {
-  .welcome__textWrap {
-    transform: translateX(3rem);
+    transform: translateX(-3rem);
   }
 }
 .welcome__text {
@@ -1418,6 +1415,7 @@ button, input, select, textarea {
 }
 .story__text {
   line-height: 2.24;
+  text-align: justify;
 }
 .story__text img {
   width: 12rem;
@@ -1487,6 +1485,7 @@ button, input, select, textarea {
 }
 .how-to-stay__text {
   line-height: 2.24;
+  text-align: justify;
 }
 
 /**

@@ -9,17 +9,14 @@
 
   &__container {
     @extend %__container;
-  }
-
-  &__flex {
-    @include row(center, center);
+    @include row(center, flex-start);
   }
 
   &__image {
     @include col(6, true, "md");
 
     @media (min-width: breakpoint("sm")) {
-      padding-inline: space("x-large");
+      padding-inline: space("medium");
     }
 
     @media (min-width: breakpoint("md")) {
@@ -33,6 +30,8 @@
 
   &__content {
     @include col(3, true, "md");
+    width: min(100%, 24rem);
+    margin: 0 auto;
 
     @media (min-width: breakpoint("md")) {
       order: 0;
@@ -44,13 +43,7 @@
     margin: space("large") auto;
 
     @media (min-width: breakpoint("md")) {
-      transform: translateX(-1.5rem);
-    }
-  }
-
-  &__textWrap {
-    @media (min-width: breakpoint("md")) {
-      transform: translateX(3rem);
+      transform: translateX(-3rem);
     }
   }
 
