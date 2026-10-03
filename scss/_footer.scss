@@ -47,7 +47,9 @@
   }
 
   &__tagline {
-    margin-inline-start: space("medium");
+    margin-inline-start: space("small");
+    font-family: $font-family-serif;
+    font-weight: 700;
   }
 
   &__brand {

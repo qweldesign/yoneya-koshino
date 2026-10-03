@@ -9,7 +9,8 @@
   &__siteBrand {
     flex: 0 1 13.5rem;
     margin: 0;
-    font-weight: 400;
+    font-family: $font-family-serif;
+    font-weight: 700;
     font-size: font-size("small");
     line-height: 1.68;
     text-align: left;

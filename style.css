@@ -229,7 +229,8 @@ button, input, select, textarea {
 .gNav__siteBrand {
   flex: 0 1 13.5rem;
   margin: 0;
-  font-weight: 400;
+  font-family: "Zen Antique", serif;
+  font-weight: 700;
   font-size: var(--font-size--small);
   line-height: 1.68;
   text-align: left;
@@ -413,7 +414,9 @@ button, input, select, textarea {
   vertical-align: bottom;
 }
 .footer__tagline {
-  margin-inline-start: var(--spacing--medium);
+  margin-inline-start: var(--spacing--small);
+  font-family: "Zen Antique", serif;
+  font-weight: 700;
 }
 .footer__brand {
   width: 18rem;
