@@ -7,9 +7,16 @@
   padding-block: space("x-large");
   background-color: theme-color("lighter");
 
+  @media (min-width: breakpoint("md")) {
+    display: flex;
+    align-items: center;
+    height: max(100svh, 36rem);
+  }
+
   &__container {
     @extend %__container;
-    @include row(center, flex-start);
+    @include row(center, center);
+    height: 100%;
   }
 
   &__image {

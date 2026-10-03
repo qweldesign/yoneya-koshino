@@ -1332,11 +1332,19 @@ button, input, select, textarea {
   padding-block: var(--spacing--x-large);
   background-color: var(--color--lighter);
 }
+@media (min-width: 864px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    height: max(100svh, 36rem);
+  }
+}
 .hero__container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  height: 100%;
 }
 @media (min-width: 864px) {
   .hero__image {
