@@ -60,10 +60,6 @@
     margin-inline: auto;
   }
 
-  &__textWrap {
-    padding-inline: space("large");
-  }
-
   &__subHeading {
     @extend %__subHeading;
   }

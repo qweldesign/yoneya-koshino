@@ -36,7 +36,6 @@
 
   &__textWrap {
     @include col(4, true, "md");
-    padding: space("large");
   }
 
   &__subHeading {

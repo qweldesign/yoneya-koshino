@@ -28,7 +28,6 @@
 
   &__image, &__textWrap {
     @include col(4, true, "md");
-    padding-inline: space("large");
     
   }
 

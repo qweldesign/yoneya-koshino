@@ -9,7 +9,6 @@
     @extend %__container;
     @include row(space-around, flex-end);
     gap: space("large");
-    padding-block: space("x-large") !important;
   }
 
   &__summary, &__detail {
