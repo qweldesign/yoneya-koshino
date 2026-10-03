@@ -1,0 +1,57 @@
+/**
+ * Project - Stay
+ */
+
+.stay {
+  @extend %__inner;
+
+  &__container {
+    @extend %__container;
+  }
+
+  &__heading {
+    @extend %__heading;
+    margin-block: space("large");
+    font-family: $font-family-serif;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__content {
+    @include row(space-around, flex-end);
+  }
+
+  &__subHeading {
+    @extend %__subHeading;
+  }
+
+  &__text {
+    line-height: 2.24;
+    text-align: justify;
+  }
+
+  &__roundImage {
+    width: 12rem;
+    margin: space("large") auto;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media (min-width: breakpoint("md")) {
+      margin-inline-start: space("x-large");
+    }
+  }
+
+  &__spot {
+    & > img {
+      border-radius: space("small");
+      overflow: hidden;
+    }
+
+    & > figcaption {
+      margin-block: space("small");
+      font-weight: 700;
+      font-size: font-size("medium");
+      text-align: left;
+    }
+  }
+}
