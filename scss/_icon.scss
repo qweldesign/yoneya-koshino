@@ -9,6 +9,7 @@ $icon-hover-color: color-yiq($theme-accent, true) !default;
 $icon-size-sm:     1.5rem !default;
 $icon-size-md:     2.25rem !default;
 $icon-size-lg:     3rem !default;
+$icon-size-xl:     clamp(3.6rem, 14.4vw, 6rem) !default;
 
 @mixin use-icon($bg: $icon-bg, $color: $icon-color, $hover-bg: $icon-hover-bg, $hover-color: $icon-hover-color, $rounded: 50%) {
   & > .icon {
@@ -50,6 +51,11 @@ $icon-size-lg:     3rem !default;
   &.is-lg {
     width: $icon-size-lg;
     height: $icon-size-lg;
+  }
+
+  &.is-xl {
+    width: $icon-size-xl;
+    height: $icon-size-xl;
   }
 
   &__span {
