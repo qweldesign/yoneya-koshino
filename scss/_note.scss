@@ -1,0 +1,18 @@
+/**
+ * Project - Note
+ */
+
+.note {
+  @extend %__inner;
+  background-color: theme-color("tertiary");
+
+  &__container {
+    @extend %__container;
+    @include row(space-around, flex-start);
+  }
+
+  h3, strong {
+    font-weight: 700;
+    color: theme-color($theme-accent);
+  }
+}

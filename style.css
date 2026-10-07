@@ -910,21 +910,21 @@ button, input, select, textarea {
 /**
  * Project - Section
  */
-.stay, .koshino, .food, .space, .plan, .how-to-stay, .story, .hero {
+.stay, .koshino, .food, .note, .space, .plan, .how-to-stay, .story, .hero {
   padding-block: var(--spacing--large);
 }
-:where(.stay, .koshino, .food, .space, .plan, .how-to-stay, .story, .hero) {
+:where(.stay, .koshino, .food, .note, .space, .plan, .how-to-stay, .story, .hero) {
   background-color: var(--color--lightest);
 }
-:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) {
+:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) {
   background-color: var(--color--darker);
   color: var(--color--lightest);
 }
-:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a {
+:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a {
   color: var(--color--lightest);
   text-decoration: none;
 }
-:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a:hover, :where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a:focus {
+:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a:hover, :where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a:focus {
   color: var(--color--lightest);
   text-decoration: underline;
 }
@@ -942,16 +942,16 @@ button, input, select, textarea {
   line-height: 1.68;
 }
 
-.stay__container, .koshino__container, .food__container, .space__container, .plan__container, .how-to-stay__container, .story__container, .hero__container, .footer__container {
+.stay__container, .koshino__container, .food__container, .note__container, .space__container, .plan__container, .how-to-stay__container, .story__container, .hero__container, .footer__container {
   padding-block-start: calc(var(--spacing--small) + var(--spacing--medium));
   padding-block-end: var(--spacing--large);
 }
-.stay__container:not(.section__container.is-md), .koshino__container:not(.section__container.is-md), .food__container:not(.section__container.is-md), .space__container:not(.section__container.is-md), .plan__container:not(.section__container.is-md), .how-to-stay__container:not(.section__container.is-md), .story__container:not(.section__container.is-md), .hero__container:not(.section__container.is-md), .footer__container:not(.section__container.is-md) {
+.stay__container:not(.section__container.is-md), .koshino__container:not(.section__container.is-md), .food__container:not(.section__container.is-md), .note__container:not(.section__container.is-md), .space__container:not(.section__container.is-md), .plan__container:not(.section__container.is-md), .how-to-stay__container:not(.section__container.is-md), .story__container:not(.section__container.is-md), .hero__container:not(.section__container.is-md), .footer__container:not(.section__container.is-md) {
   width: min(100%, var(--container-width--lg));
   margin-inline: auto;
   padding-inline: var(--container-pad--lg);
 }
-.is-md.stay__container, .is-md.koshino__container, .is-md.food__container, .is-md.space__container, .is-md.plan__container, .is-md.how-to-stay__container, .is-md.story__container, .is-md.hero__container, .is-md.footer__container {
+.is-md.stay__container, .is-md.koshino__container, .is-md.food__container, .is-md.note__container, .is-md.space__container, .is-md.plan__container, .is-md.how-to-stay__container, .is-md.story__container, .is-md.hero__container, .is-md.footer__container {
   width: min(100%, var(--container-width--md));
   margin-inline: auto;
   padding-inline: var(--container-pad--md);
@@ -1259,6 +1259,23 @@ button, input, select, textarea {
 .space__text {
   line-height: 2.24;
   text-align: justify;
+}
+
+/**
+ * Project - Note
+ */
+.note {
+  background-color: var(--color--tertiary);
+}
+.note__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.note h3, .note strong {
+  font-weight: 700;
+  color: var(--color--primary);
 }
 
 /**
