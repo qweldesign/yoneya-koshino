@@ -454,6 +454,14 @@ button, input, select, textarea {
 .footer__table th {
   font-weight: 400;
 }
+.footer__line {
+  display: block;
+  width: 18rem;
+  transition: opacity 0.35s ease;
+}
+.footer__line:hover {
+  opacity: 0.7;
+}
 .footer__copyright {
   display: block;
   margin-block: var(--spacing--medium);
@@ -910,21 +918,21 @@ button, input, select, textarea {
 /**
  * Project - Section
  */
-.stay, .koshino, .food, .note, .space, .plan, .how-to-stay, .story, .hero {
+.stay, .koshino, .food, .note, .space, .plan, .how-to-stay, .story, .hero, .banner {
   padding-block: var(--spacing--large);
 }
-:where(.stay, .koshino, .food, .note, .space, .plan, .how-to-stay, .story, .hero) {
+:where(.stay, .koshino, .food, .note, .space, .plan, .how-to-stay, .story, .hero, .banner) {
   background-color: var(--color--lightest);
 }
-:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) {
+:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero, .section:nth-child(odd) .banner) {
   background-color: var(--color--darker);
   color: var(--color--lightest);
 }
-:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a {
+:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero, .section:nth-child(odd) .banner) a {
   color: var(--color--lightest);
   text-decoration: none;
 }
-:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a:hover, :where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero) a:focus {
+:where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero, .section:nth-child(odd) .banner) a:hover, :where(.section:nth-child(odd) .stay, .section:nth-child(odd) .koshino, .section:nth-child(odd) .food, .section:nth-child(odd) .note, .section:nth-child(odd) .space, .section:nth-child(odd) .plan, .section:nth-child(odd) .how-to-stay, .section:nth-child(odd) .story, .section:nth-child(odd) .hero, .section:nth-child(odd) .banner) a:focus {
   color: var(--color--lightest);
   text-decoration: underline;
 }
@@ -955,6 +963,22 @@ button, input, select, textarea {
   width: min(100%, var(--container-width--md));
   margin-inline: auto;
   padding-inline: var(--container-pad--md);
+}
+
+/**
+ * Project - Banner
+ */
+.banner {
+  background-color: var(--color--tertiary);
+}
+.banner__line {
+  display: block;
+  width: min(90%, 36rem);
+  margin: 0 auto;
+  transition: opacity 0.35s ease;
+}
+.banner__line:hover {
+  opacity: 0.7;
 }
 
 /**

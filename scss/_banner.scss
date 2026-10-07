@@ -1,0 +1,19 @@
+/**
+ * Project - Banner
+ */
+
+.banner {
+  @extend %__inner;
+  background-color: theme-color("tertiary");
+
+  &__line {
+    display: block;
+    width: min(90%, 36rem);
+    margin: 0 auto;
+    transition: opacity 0.35s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
