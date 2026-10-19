@@ -1,6 +1,6 @@
-## QWEL STARTER TEMPLATE
+## 民宿よねや
 
-[QWEL.DESIGN](https://qwel.design) のweb開発のためのスターターキット
+[yoneya-koshino.com](https://yoneya-koshino.com)
 
 ---
 
